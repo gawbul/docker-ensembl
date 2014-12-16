@@ -1,4 +1,4 @@
-DockerEnsembl
-=============
+docker-ensembl
+==============
 
-Dockerfile for the EnsEMBL Perl APIs
+Dockerfile to create a container image with the EnsEMBL Perl APIs and tools installed
