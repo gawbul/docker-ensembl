@@ -35,6 +35,9 @@ RUN sudo cpanm DBI DBD::mysql
 RUN mkdir -p src
 WORKDIR $HOME/src
 RUN git clone https://github.com/bioperl/bioperl-live.git
+WORKDIR $HOME/src/bioperl-live
+RUN git checkout bioperl-release-1-6-901
+WORKDIR $HOME/src
 RUN git clone https://github.com/Ensembl/ensembl-git-tools.git
 ENV PATH $HOME/src/ensembl-git-tools/bin:$PATH
 RUN git ensembl --clone api
