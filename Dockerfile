@@ -30,6 +30,7 @@ WORKDIR $HOME
 # install ensembl dependencies
 RUN sudo apt-get -y install mysql-client libmysqlclient-dev libssl-dev
 RUN sudo cpanm DBI DBD::mysql
+RUN sudo chown -R ensembl:ensembl $HOME/.cpanm
 
 # clone git repositories
 RUN mkdir -p src
